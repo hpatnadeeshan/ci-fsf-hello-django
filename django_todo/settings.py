@@ -26,12 +26,16 @@ SECRET_KEY = 'django-insecure-=j3_ne(hmk#y6vmh+nh8m!(x@(tsbwxe%wi%_uz!ova#)7m1o(
 DEBUG = True
 
 ALLOWED_HOSTS = [
+<<<<<<< HEAD
     '8000-hpatnadeeshan-ci-fsf-hel-9ey6lykqzd.us2.codeanyapp.com', 'localhost']
+=======
+    '8000-hpatnadeesh-cifsfhellod-mwdbqdp6ite.ws-eu107.gitpod.io', 'localhost']
+>>>>>>> 78c6ff4 (3rd)
 
 # settings.py
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-hpatnadeeshan-ci-fsf-hel-za4eoza3ni.us2.codeanyapp.com']
+    'https://8000-hpatnadeesh-cifsfhellod-mwdbqdp6ite.ws-eu107.gitpod.io']
 
 
 # Application definition
