@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-=j3_ne(hmk#y6vmh+nh8m!(x@(tsbwxe%wi%_uz!ova#)7m1o(
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    '8000-hpatnadeeshan-ci-fsf-hel-za4eoza3ni.us2.codeanyapp.com', 'localhost']
+    '8000-hpatnadeeshan-ci-fsf-hel-9ey6lykqzd.us2.codeanyapp.com', 'localhost']
 
 # settings.py
 
