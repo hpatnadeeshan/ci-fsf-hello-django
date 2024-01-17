@@ -31,13 +31,13 @@ SECRET_KEY = 'django-insecure-=j3_ne(hmk#y6vmh+nh8m!(x@(tsbwxe%wi%_uz!ova#)7m1o(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['https://5432-hpatnadeesh-cifsfhellod-mwdbqdp6ite.ws-eu107.gitpod.io/', 'localhost']
+ALLOWED_HOSTS = ['django-to-do-app-f40a7e0fb497.herokuapp.com']
 
 
 # settings.py
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://5432-hpatnadeesh-cifsfhellod-mwdbqdp6ite.ws-eu107.gitpod.io/']
+    'django-to-do-app-f40a7e0fb497.herokuapp.com']
 
 
 # Application definition
