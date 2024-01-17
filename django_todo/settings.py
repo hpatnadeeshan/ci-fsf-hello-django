@@ -9,8 +9,14 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import dj_database_url
 from pathlib import Path
+import os
+
+if os.path.isfile("env.py"):
+    import env
+
+
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -25,13 +31,13 @@ SECRET_KEY = 'django-insecure-=j3_ne(hmk#y6vmh+nh8m!(x@(tsbwxe%wi%_uz!ova#)7m1o(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-hpatnadeesh-cifsfhellod-mwdbqdp6ite.ws-eu107.gitpod.io', 'localhost']
+ALLOWED_HOSTS = ['https://5432-hpatnadeesh-cifsfhellod-mwdbqdp6ite.ws-eu107.gitpod.io/', 'localhost']
 
 
 # settings.py
 
 CSRF_TRUSTED_ORIGINS = [
-    'https://8000-hpatnadeesh-cifsfhellod-mwdbqdp6ite.ws-eu107.gitpod.io']
+    'https://5432-hpatnadeesh-cifsfhellod-mwdbqdp6ite.ws-eu107.gitpod.io/']
 
 
 # Application definition
@@ -43,7 +49,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'todo'
+    'todo',
 ]
 
 MIDDLEWARE = [
@@ -80,11 +86,22 @@ WSGI_APPLICATION = 'django_todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+
+
+# DATABASES = {
+#    'default': dj_database_url.parse('postgresql://qictovjr:p3Ux2Nwfi8sYeW0IbJi-FvVBUdVza7M7@horton.db.elephantsql.com/qictovjr')
+# }
+
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    "default": dj_database_url.parse(os.environ.get("DATABASE_URL"))
+    
 }
 
 
